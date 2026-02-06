@@ -1,4 +1,3 @@
-const CELL_SIZE = 30;
 const MAZE_SIZE = 15;
 let player = { x: 0, y: 0};
 let timer;
@@ -6,6 +5,10 @@ let timeLeft = 30;
 let maze;
 let exitPos;
 let gameActive = false;
+let CELL_SIZE = Math.floor(
+  Math.min(window.innerWidth - 40, 420) / MAZE_SIZE
+);
+
 
 function generateMaze() {
      maze = Array.from({ length: MAZE_SIZE }, () =>
@@ -104,7 +107,7 @@ function generateMaze() {
         case 2:
             maze[exitY][exitX].walls.bottom = false;
             break;
-        case 1:
+        case 3:
             maze[exitY][exitX].walls.left = false;
             break;
     }

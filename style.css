@@ -6,7 +6,8 @@ body{
     font-family: "Arial", sans-serif;
     min-height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
 }
 
@@ -119,6 +120,7 @@ body{
     transform: scale(1.15);
     box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
 }
+
 .control.btn.active{
     transform: scale(0.9);
 }
